@@ -3,7 +3,7 @@
 
 #include "card.hpp"
 
-enum class combinations {
+enum class combination {
 	HIGH_CARD,
 	ONE_PAIR,																	// done
 	TWO_PAIR,																	// done
@@ -190,6 +190,19 @@ counting_ranks:
 			r5 = 1;
 	}
 	return r1*r2*r3*r4*r5;
+}
+
+combination findPowerComb (std::vector<Card> vec) {
+	if (isROYAL_FLUSH(std::vector<Card> vec)) return combination::ROYAL_FLUSH;
+	//if (isSTRAIGHT_FLUSH(std::vector<Card> vec)) return combination::STRAIGHT_FLUSH;
+	if (isFOUR_OF_A_KIND(std::vector<Card> vec)) return combination::FOUR_OF_A_KIND;
+	//if (isFULL_HOUSE(std::vector<Card> vec)) return combination::FULL_HOUSE;
+	if (isFLUSH(std::vector<Card> vec)) return combination::FLUSH;
+	//if (isSTRAIGHT(std::vector<Card> vec)) return combination::STRAIGHT;
+	if (isTHREE_OF_A_KIND(std::vector<Card> vec)) return combination::THREE_OF_A_KIND;
+	if (isTWO_PAIR(std::vector<Card> vec)) return combination::TWO_PAIR;
+	if (isONE_PAIR(std::vector<Card> vec)) return combination::ONE_PAIR;
+	return combination::HIGH_CARD;
 }
 
 
