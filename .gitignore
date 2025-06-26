@@ -1,0 +1,5 @@
+# ignore result .exe
+*.exe
+
+#ignore text files
+*.txt
