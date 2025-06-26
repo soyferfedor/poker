@@ -1,3 +1,6 @@
+#ifndef GAME_HPP_INCLUDED
+#define GAME_HPP_INCLUDED
+
 #include "card.hpp"
 #include <vector>
 #include <iterator>
@@ -20,3 +23,8 @@ public:
 	void erase(suit crtS, rank crtR) {} //write
 	~availCards() {cards.clear();}
 };
+
+
+
+
+#endif // GAME_HPP_INCLUDED

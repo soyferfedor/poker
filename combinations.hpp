@@ -1,3 +1,6 @@
+#ifndef COMBINATIONS_HPP_INCLUDED
+#define COMBINATIONS_HPP_INCLUDED
+
 #include "card.hpp"
 
 enum class combinations {
@@ -188,3 +191,7 @@ counting_ranks:
 	}
 	return r1*r2*r3*r4*r5;
 }
+
+
+
+#endif // COMBINATIONS_HPP_INCLUDED
