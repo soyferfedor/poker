@@ -41,6 +41,9 @@ public:
 	std::pair<suit, rank> getVal() const {return val;} 
 	suit getSuit() const {return std::get<0>(val);}
 	rank getRank() const {return std::get<1>(val);}
+	bool operator==(const Card& crt) const {
+		return val == crt.getVal();
+    }
 	~Card() {}
 };
 

@@ -11,4 +11,6 @@ int main () {
 	std::cout << (int)mypair.first << " " << (int)mypair.second << "\n";
 	availCards avai;
 	std::cout << avai.numUnknCards() << "\n";
+	avai.erase(ca);
+	std::cout << avai.numUnknCards() << "\n";
 }
