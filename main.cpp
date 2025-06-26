@@ -2,6 +2,7 @@
 #include <iostream>
 #include "card.hpp"
 #include "game.hpp"
+#include "combinations.hpp"
 
 int main () {
 	suit s = suit::CLUBS;
