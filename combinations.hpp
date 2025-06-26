@@ -80,7 +80,7 @@ bool isTWO_PAIR(std::vector<Card> vec) {
 	return sum >= 2 ? true : false;
 }
 
-bool isONE_THREE_OF_A_KIND(std::vector<Card> vec) {
+bool isTHREE_OF_A_KIND(std::vector<Card> vec) {
 	if (vec.size() < 3)															// add check NO MORE THAN 7 CARDS
 		return 0;
 	int su[13] = {0};
@@ -193,15 +193,15 @@ counting_ranks:
 }
 
 combination findPowerComb (std::vector<Card> vec) {
-	if (isROYAL_FLUSH(std::vector<Card> vec)) return combination::ROYAL_FLUSH;
-	//if (isSTRAIGHT_FLUSH(std::vector<Card> vec)) return combination::STRAIGHT_FLUSH;
-	if (isFOUR_OF_A_KIND(std::vector<Card> vec)) return combination::FOUR_OF_A_KIND;
-	//if (isFULL_HOUSE(std::vector<Card> vec)) return combination::FULL_HOUSE;
-	if (isFLUSH(std::vector<Card> vec)) return combination::FLUSH;
-	//if (isSTRAIGHT(std::vector<Card> vec)) return combination::STRAIGHT;
-	if (isTHREE_OF_A_KIND(std::vector<Card> vec)) return combination::THREE_OF_A_KIND;
-	if (isTWO_PAIR(std::vector<Card> vec)) return combination::TWO_PAIR;
-	if (isONE_PAIR(std::vector<Card> vec)) return combination::ONE_PAIR;
+	if (isROYAL_FLUSH(vec)) return combination::ROYAL_FLUSH;
+	//if (isSTRAIGHT_FLUSH(vec)) return combination::STRAIGHT_FLUSH;
+	if (isFOUR_OF_A_KIND(vec)) return combination::FOUR_OF_A_KIND;
+	//if (isFULL_HOUSE(vec)) return combination::FULL_HOUSE;
+	if (isFLUSH(vec)) return combination::FLUSH;
+	//if (isSTRAIGHT(vec)) return combination::STRAIGHT;
+	if (isTHREE_OF_A_KIND(vec)) return combination::THREE_OF_A_KIND;
+	if (isTWO_PAIR(vec)) return combination::TWO_PAIR;
+	if (isONE_PAIR(vec)) return combination::ONE_PAIR;
 	return combination::HIGH_CARD;
 }
 
