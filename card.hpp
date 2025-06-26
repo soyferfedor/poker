@@ -4,6 +4,8 @@
 #include <utility>
 
 constexpr unsigned int numCards = 52;
+constexpr unsigned int suitVar = 4;
+constexpr unsigned int rankVar = 13;
 
 enum class suit {
         SPADES,
@@ -32,6 +34,7 @@ class Card {
 	std::pair<suit, rank> val;
 public:
 	Card(suit s, rank r): val(s, r)  {}
+	Card(std::pair<suit, rank> input): val(input.first, input.second) {}
 	Card() {}
 	void setVal(suit s, rank r) {val=std::make_pair(s, r);}
 	void setVal(std::pair<suit, rank> input) {val=input;}
@@ -43,6 +46,7 @@ public:
 
 class myCards {
 	Card card[2];
+public:
 	myCards(suit s1, rank r1, suit s2, rank r2) {card[0].setVal(s1, r1); card[1].setVal(s2, r2);}
 	myCards() {}
 	void setCards(suit s1, rank r1, suit s2, rank r2) {	card[0].setVal(std::make_pair(s1, r1));
