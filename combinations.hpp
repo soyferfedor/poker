@@ -2,9 +2,9 @@
 
 enum class combinations {
 	HIGH_CARD,
-	ONE_PAIR,
-	TWO_PAIR,
-	THREE_OF_A_KIND,
+	ONE_PAIR,																	// done
+	TWO_PAIR,																	// done
+	THREE_OF_A_KIND,															// done
 	STRAIGHT,
 	FLUSH,																		// done
 	FULL_HOUSE,
@@ -23,6 +23,84 @@ bool isEqualRank (Card c1, Card c2) {
 
 bool isEqualSuit (Card c1, Card c2) {
 	return c1.getSuit() == c2.getSuit();
+}
+
+bool isONE_PAIR(std::vector<Card> vec) {
+	if (vec.size() < 2)															// add check NO MORE THAN 7 CARDS
+		return 0;
+	int su[13] = {0};
+	for (Card tmp : vec)
+		switch (tmp.getRank()) {
+			case rank::A		: su[0]++;
+			case rank::_2		: su[1]++;
+			case rank::_3		: su[2]++;
+			case rank::_4		: su[3]++;
+			case rank::_5		: su[4]++;
+			case rank::_6		: su[5]++;
+			case rank::_7		: su[6]++;
+			case rank::_8		: su[7]++;
+			case rank::_9		: su[8]++;
+			case rank::_10		: su[9]++;
+			case rank::J		: su[10]++;
+			case rank::Q		: su[11]++;
+			case rank::K		: su[12]++;
+		}
+	int sum = 0;
+	for (int t: su)
+		sum += t/2;
+	return sum;
+}
+
+bool isTWO_PAIR(std::vector<Card> vec) {
+	if (vec.size() < 4)															// add check NO MORE THAN 7 CARDS
+		return 0;
+	int su[13] = {0};
+	for (Card tmp : vec)
+		switch (tmp.getRank()) {
+			case rank::A		: su[0]++;
+			case rank::_2		: su[1]++;
+			case rank::_3		: su[2]++;
+			case rank::_4		: su[3]++;
+			case rank::_5		: su[4]++;
+			case rank::_6		: su[5]++;
+			case rank::_7		: su[6]++;
+			case rank::_8		: su[7]++;
+			case rank::_9		: su[8]++;
+			case rank::_10		: su[9]++;
+			case rank::J		: su[10]++;
+			case rank::Q		: su[11]++;
+			case rank::K		: su[12]++;
+		}
+	int sum = 0;
+	for (int t: su)
+		sum += t/2;
+	return sum >= 2 ? true : false;
+}
+
+bool isONE_THREE_OF_A_KIND(std::vector<Card> vec) {
+	if (vec.size() < 3)															// add check NO MORE THAN 7 CARDS
+		return 0;
+	int su[13] = {0};
+	for (Card tmp : vec)
+		switch (tmp.getRank()) {
+			case rank::A		: su[0]++;
+			case rank::_2		: su[1]++;
+			case rank::_3		: su[2]++;
+			case rank::_4		: su[3]++;
+			case rank::_5		: su[4]++;
+			case rank::_6		: su[5]++;
+			case rank::_7		: su[6]++;
+			case rank::_8		: su[7]++;
+			case rank::_9		: su[8]++;
+			case rank::_10		: su[9]++;
+			case rank::J		: su[10]++;
+			case rank::Q		: su[11]++;
+			case rank::K		: su[12]++;
+		}
+	int sum = 0;
+	for (int t: su)
+		sum += t/3;
+	return sum;
 }
 
 bool isFLUSH(std::vector<Card> vec) {
