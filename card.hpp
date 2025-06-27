@@ -15,7 +15,6 @@ enum class suit {
 };
 
 enum class rank {
-        A,
 	_2,
 	_3,
 	_4,
@@ -27,7 +26,8 @@ enum class rank {
 	_10,
 	J,
 	Q,
-	K
+	K,
+	A
 };
 
 class Card {
