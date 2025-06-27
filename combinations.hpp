@@ -5,15 +5,15 @@
 
 enum class combination {
 	HIGH_CARD,
-	ONE_PAIR,																	// done
-	TWO_PAIR,																	// done
-	THREE_OF_A_KIND,															// done
-	STRAIGHT,																	// done
-	FLUSH,																		// done
-	FULL_HOUSE,																	// done
-	FOUR_OF_A_KIND,																// done
+	ONE_PAIR,
+	TWO_PAIR,
+	THREE_OF_A_KIND,
+	STRAIGHT,
+	FLUSH,
+	FULL_HOUSE,
+	FOUR_OF_A_KIND,
 	STRAIGHT_FLUSH,
-	ROYAL_FLUSH																	// done
+	ROYAL_FLUSH
 };
 
 Card maxRank (Card c1, Card c2) {
@@ -208,6 +208,63 @@ bool isFOUR_OF_A_KIND(std::vector<Card> vec) {
 	return sum;
 }
 
+bool isSTRAIGHT_FLUSH(std::vector<Card> vec) {
+	if (vec.size() < 5)															// add check NO MORE THAN 7 CARDS
+		return 0;
+	int su[4] = {0};
+	suit s;
+	for (Card tmp : vec)
+		switch (tmp.getSuit()) {
+			case suit::SPADES		: su[0]++;
+			case suit::HEARTS		: su[1]++;
+			case suit::DIAMONDS		: su[2]++;
+			case suit::CLUBS		: su[3]++;
+		}
+	if ((int)su[0] >= 5) {
+		s = suit::SPADES;
+		goto counting_rk;
+	}
+	if ((int)su[1] >= 5) {
+		s = suit::HEARTS;
+		goto counting_rk;
+	}
+	if ((int)su[2] >= 5) {
+		s = suit::DIAMONDS;
+		goto counting_rk;
+	}
+	if ((int)su[3] >= 5) {
+		s = suit::CLUBS;
+		goto counting_rk;
+	}
+	return 0;
+counting_rk:
+	int rk[13] = {0};
+	for (Card tmp : vec)
+		if (tmp.getSuit() == s)
+			switch (tmp.getRank()) {
+				case rank::_2		: rk[0]++;
+				case rank::_3		: rk[1]++;
+				case rank::_4		: rk[2]++;
+				case rank::_5		: rk[3]++;
+				case rank::_6		: rk[4]++;
+				case rank::_7		: rk[5]++;
+				case rank::_8		: rk[6]++;
+				case rank::_9		: rk[7]++;
+				case rank::_10		: rk[8]++;
+				case rank::J		: rk[9]++;
+				case rank::Q		: rk[10]++;
+				case rank::K		: rk[11]++;
+				case rank::A		: rk[12]++;
+			}
+	for (int i=0; i < 9; ++i)
+		if (su[i] != 0 && su[i+1] != 0 && su[i+2] != 0 && su[i+3] != 0 && su[i+4] != 0)
+			return 1;
+	if (su[0] != 0 && su[1] != 0 && su[2] != 0 && su[3] != 0 && su[12] != 0)
+		return 1;
+	return 0;
+}
+
+
 bool isROYAL_FLUSH(std::vector<Card> vec) {
 	if (vec.size() < 5)															// add check NO MORE THAN 7 CARDS
 		return 0;
@@ -256,7 +313,7 @@ counting_ranks:
 
 combination findPowerComb (std::vector<Card> vec) {
 	if (isROYAL_FLUSH(vec)) return combination::ROYAL_FLUSH;
-	//if (isSTRAIGHT_FLUSH(vec)) return combination::STRAIGHT_FLUSH;
+	if (isSTRAIGHT_FLUSH(vec)) return combination::STRAIGHT_FLUSH;
 	if (isFOUR_OF_A_KIND(vec)) return combination::FOUR_OF_A_KIND;
 	if (isFULL_HOUSE(vec)) return combination::FULL_HOUSE;
 	if (isFLUSH(vec)) return combination::FLUSH;
