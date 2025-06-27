@@ -34,19 +34,19 @@ bool isONE_PAIR(std::vector<Card> vec) {
 	int su[13] = {0};
 	for (Card tmp : vec)
 		switch (tmp.getRank()) {
-			case rank::_2		: su[0]++;
-			case rank::_3		: su[1]++;
-			case rank::_4		: su[2]++;
-			case rank::_5		: su[3]++;
-			case rank::_6		: su[4]++;
-			case rank::_7		: su[5]++;
-			case rank::_8		: su[6]++;
-			case rank::_9		: su[7]++;
-			case rank::_10		: su[8]++;
-			case rank::J		: su[9]++;
-			case rank::Q		: su[10]++;
-			case rank::K		: su[11]++;
-			case rank::A		: su[12]++;
+			case rank::_2		: su[0]++; break;
+			case rank::_3		: su[1]++; break;
+			case rank::_4		: su[2]++; break;
+			case rank::_5		: su[3]++; break;
+			case rank::_6		: su[4]++; break;
+			case rank::_7		: su[5]++; break;
+			case rank::_8		: su[6]++; break;
+			case rank::_9		: su[7]++; break;
+			case rank::_10		: su[8]++; break;
+			case rank::J		: su[9]++; break;
+			case rank::Q		: su[10]++; break;
+			case rank::K		: su[11]++; break;
+			case rank::A		: su[12]++; break;
 		}
 	int sum = 0;
 	for (int t: su)
@@ -60,19 +60,19 @@ bool isTWO_PAIR(std::vector<Card> vec) {
 	int su[13] = {0};
 	for (Card tmp : vec)
 		switch (tmp.getRank()) {
-			case rank::_2		: su[0]++;
-			case rank::_3		: su[1]++;
-			case rank::_4		: su[2]++;
-			case rank::_5		: su[3]++;
-			case rank::_6		: su[4]++;
-			case rank::_7		: su[5]++;
-			case rank::_8		: su[6]++;
-			case rank::_9		: su[7]++;
-			case rank::_10		: su[8]++;
-			case rank::J		: su[9]++;
-			case rank::Q		: su[10]++;
-			case rank::K		: su[11]++;
-			case rank::A		: su[12]++;
+			case rank::_2		: su[0]++; break;
+			case rank::_3		: su[1]++; break;
+			case rank::_4		: su[2]++; break;
+			case rank::_5		: su[3]++; break;
+			case rank::_6		: su[4]++; break;
+			case rank::_7		: su[5]++; break;
+			case rank::_8		: su[6]++; break;
+			case rank::_9		: su[7]++; break;
+			case rank::_10		: su[8]++; break;
+			case rank::J		: su[9]++; break;
+			case rank::Q		: su[10]++; break;
+			case rank::K		: su[11]++; break;
+			case rank::A		: su[12]++; break;
 		}
 	int sum = 0;
 	for (int t: su)
@@ -86,19 +86,19 @@ bool isTHREE_OF_A_KIND(std::vector<Card> vec) {
 	int su[13] = {0};
 	for (Card tmp : vec)
 		switch (tmp.getRank()) {
-			case rank::_2		: su[0]++;
-			case rank::_3		: su[1]++;
-			case rank::_4		: su[2]++;
-			case rank::_5		: su[3]++;
-			case rank::_6		: su[4]++;
-			case rank::_7		: su[5]++;
-			case rank::_8		: su[6]++;
-			case rank::_9		: su[7]++;
-			case rank::_10		: su[8]++;
-			case rank::J		: su[9]++;
-			case rank::Q		: su[10]++;
-			case rank::K		: su[11]++;
-			case rank::A		: su[12]++;
+			case rank::_2		: su[0]++; break;
+			case rank::_3		: su[1]++; break;
+			case rank::_4		: su[2]++; break;
+			case rank::_5		: su[3]++; break;
+			case rank::_6		: su[4]++; break;
+			case rank::_7		: su[5]++; break;
+			case rank::_8		: su[6]++; break;
+			case rank::_9		: su[7]++; break;
+			case rank::_10		: su[8]++; break;
+			case rank::J		: su[9]++; break;
+			case rank::Q		: su[10]++; break;
+			case rank::K		: su[11]++; break;
+			case rank::A		: su[12]++; break;
 		}
 	int sum = 0;
 	for (int t: su)
@@ -112,19 +112,19 @@ bool isSTRAIGHT(std::vector<Card> vec) {
 	int su[13] = {0};
 	for (Card tmp : vec)
 		switch (tmp.getRank()) {
-			case rank::_2		: su[0]++;
-			case rank::_3		: su[1]++;
-			case rank::_4		: su[2]++;
-			case rank::_5		: su[3]++;
-			case rank::_6		: su[4]++;
-			case rank::_7		: su[5]++;
-			case rank::_8		: su[6]++;
-			case rank::_9		: su[7]++;
-			case rank::_10		: su[8]++;
-			case rank::J		: su[9]++;
-			case rank::Q		: su[10]++;
-			case rank::K		: su[11]++;
-			case rank::A		: su[12]++;
+			case rank::_2		: su[0]++; break;
+			case rank::_3		: su[1]++; break;
+			case rank::_4		: su[2]++; break;
+			case rank::_5		: su[3]++; break;
+			case rank::_6		: su[4]++; break;
+			case rank::_7		: su[5]++; break;
+			case rank::_8		: su[6]++; break;
+			case rank::_9		: su[7]++; break;
+			case rank::_10		: su[8]++; break;
+			case rank::J		: su[9]++; break;
+			case rank::Q		: su[10]++; break;
+			case rank::K		: su[11]++; break;
+			case rank::A		: su[12]++; break;
 		}
 	for (int i=0; i < 9; ++i)
 		if (su[i] != 0 && su[i+1] != 0 && su[i+2] != 0 && su[i+3] != 0 && su[i+4] != 0)
@@ -140,10 +140,10 @@ bool isFLUSH(std::vector<Card> vec) {
 	int su[4] = {0};
 	for (Card tmp : vec)
 		switch (tmp.getSuit()) {
-			case suit::SPADES		: su[0]++;
-			case suit::HEARTS		: su[1]++;
-			case suit::DIAMONDS		: su[2]++;
-			case suit::CLUBS		: su[3]++;
+			case suit::SPADES		: su[0]++; break;
+			case suit::HEARTS		: su[1]++; break;
+			case suit::DIAMONDS		: su[2]++; break;
+			case suit::CLUBS		: su[3]++; break;
 		}
 	return su[0]/5 + su[1]/5 + su[2]/5 + su[3]/5;
 }
@@ -154,19 +154,19 @@ bool isFULL_HOUSE(std::vector<Card> vec) {
 	int su[13] = {0};
 	for (Card tmp : vec)
 		switch (tmp.getRank()) {
-			case rank::_2		: su[0]++;
-			case rank::_3		: su[1]++;
-			case rank::_4		: su[2]++;
-			case rank::_5		: su[3]++;
-			case rank::_6		: su[4]++;
-			case rank::_7		: su[5]++;
-			case rank::_8		: su[6]++;
-			case rank::_9		: su[7]++;
-			case rank::_10		: su[8]++;
-			case rank::J		: su[9]++;
-			case rank::Q		: su[10]++;
-			case rank::K		: su[11]++;
-			case rank::A		: su[12]++;
+			case rank::_2		: su[0]++; break;
+			case rank::_3		: su[1]++; break;
+			case rank::_4		: su[2]++; break;
+			case rank::_5		: su[3]++; break;
+			case rank::_6		: su[4]++; break;
+			case rank::_7		: su[5]++; break;
+			case rank::_8		: su[6]++; break;
+			case rank::_9		: su[7]++; break;
+			case rank::_10		: su[8]++; break;
+			case rank::J		: su[9]++; break;
+			case rank::Q		: su[10]++; break;
+			case rank::K		: su[11]++; break;
+			case rank::A		: su[12]++; break;
 		}
 	int p = 0, t = 0;
 	for (int i=0; i < 13; i++) {
@@ -188,19 +188,19 @@ bool isFOUR_OF_A_KIND(std::vector<Card> vec) {
 	int su[13] = {0};
 	for (Card tmp : vec)
 		switch (tmp.getRank()) {
-			case rank::_2		: su[0]++;
-			case rank::_3		: su[1]++;
-			case rank::_4		: su[2]++;
-			case rank::_5		: su[3]++;
-			case rank::_6		: su[4]++;
-			case rank::_7		: su[5]++;
-			case rank::_8		: su[6]++;
-			case rank::_9		: su[7]++;
-			case rank::_10		: su[8]++;
-			case rank::J		: su[9]++;
-			case rank::Q		: su[10]++;
-			case rank::K		: su[11]++;
-			case rank::A		: su[12]++;
+			case rank::_2		: su[0]++; break;
+			case rank::_3		: su[1]++; break;
+			case rank::_4		: su[2]++; break;
+			case rank::_5		: su[3]++; break;
+			case rank::_6		: su[4]++; break;
+			case rank::_7		: su[5]++; break;
+			case rank::_8		: su[6]++; break;
+			case rank::_9		: su[7]++; break;
+			case rank::_10		: su[8]++; break;
+			case rank::J		: su[9]++; break;
+			case rank::Q		: su[10]++; break;
+			case rank::K		: su[11]++; break;
+			case rank::A		: su[12]++; break;
 		}
 	int sum = 0;
 	for (int t: su)
@@ -215,10 +215,10 @@ bool isSTRAIGHT_FLUSH(std::vector<Card> vec) {
 	suit s;
 	for (Card tmp : vec)
 		switch (tmp.getSuit()) {
-			case suit::SPADES		: su[0]++;
-			case suit::HEARTS		: su[1]++;
-			case suit::DIAMONDS		: su[2]++;
-			case suit::CLUBS		: su[3]++;
+			case suit::SPADES		: su[0]++; break;
+			case suit::HEARTS		: su[1]++; break;
+			case suit::DIAMONDS		: su[2]++; break;
+			case suit::CLUBS		: su[3]++; break;
 		}
 	if ((int)su[0] >= 5) {
 		s = suit::SPADES;
@@ -242,19 +242,19 @@ counting_rk:
 	for (Card tmp : vec)
 		if (tmp.getSuit() == s)
 			switch (tmp.getRank()) {
-				case rank::_2		: rk[0]++;
-				case rank::_3		: rk[1]++;
-				case rank::_4		: rk[2]++;
-				case rank::_5		: rk[3]++;
-				case rank::_6		: rk[4]++;
-				case rank::_7		: rk[5]++;
-				case rank::_8		: rk[6]++;
-				case rank::_9		: rk[7]++;
-				case rank::_10		: rk[8]++;
-				case rank::J		: rk[9]++;
-				case rank::Q		: rk[10]++;
-				case rank::K		: rk[11]++;
-				case rank::A		: rk[12]++;
+			case rank::_2		: su[0]++; break;
+			case rank::_3		: su[1]++; break;
+			case rank::_4		: su[2]++; break;
+			case rank::_5		: su[3]++; break;
+			case rank::_6		: su[4]++; break;
+			case rank::_7		: su[5]++; break;
+			case rank::_8		: su[6]++; break;
+			case rank::_9		: su[7]++; break;
+			case rank::_10		: su[8]++; break;
+			case rank::J		: su[9]++; break;
+			case rank::Q		: su[10]++; break;
+			case rank::K		: su[11]++; break;
+			case rank::A		: su[12]++; break;
 			}
 	for (int i=0; i < 9; ++i)
 		if (su[i] != 0 && su[i+1] != 0 && su[i+2] != 0 && su[i+3] != 0 && su[i+4] != 0)
@@ -272,10 +272,10 @@ bool isROYAL_FLUSH(std::vector<Card> vec) {
 	suit s;
 	for (Card tmp : vec)
 		switch (tmp.getSuit()) {
-			case suit::SPADES		: su[0]++;
-			case suit::HEARTS		: su[1]++;
-			case suit::DIAMONDS		: su[2]++;
-			case suit::CLUBS		: su[3]++;
+			case suit::SPADES		: su[0]++; break;
+			case suit::HEARTS		: su[1]++; break;
+			case suit::DIAMONDS		: su[2]++; break;
+			case suit::CLUBS		: su[3]++; break;
 		}
 	if ((int)su[0] >= 5) {
 		s = suit::SPADES;
