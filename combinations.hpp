@@ -242,24 +242,24 @@ counting_rk:
 	for (Card tmp : vec)
 		if (tmp.getSuit() == s)
 			switch (tmp.getRank()) {
-			case rank::_2		: su[0]++; break;
-			case rank::_3		: su[1]++; break;
-			case rank::_4		: su[2]++; break;
-			case rank::_5		: su[3]++; break;
-			case rank::_6		: su[4]++; break;
-			case rank::_7		: su[5]++; break;
-			case rank::_8		: su[6]++; break;
-			case rank::_9		: su[7]++; break;
-			case rank::_10		: su[8]++; break;
-			case rank::J		: su[9]++; break;
-			case rank::Q		: su[10]++; break;
-			case rank::K		: su[11]++; break;
-			case rank::A		: su[12]++; break;
+				case rank::_2		: rk[0]++; break;
+				case rank::_3		: rk[1]++; break;
+				case rank::_4		: rk[2]++; break;
+				case rank::_5		: rk[3]++; break;
+				case rank::_6		: rk[4]++; break;
+				case rank::_7		: rk[5]++; break;
+				case rank::_8		: rk[6]++; break;
+				case rank::_9		: rk[7]++; break;
+				case rank::_10		: rk[8]++; break;
+				case rank::J		: rk[9]++; break;
+				case rank::Q		: rk[10]++; break;
+				case rank::K		: rk[11]++; break;
+				case rank::A		: rk[12]++; break;
 			}
 	for (int i=0; i < 9; ++i)
-		if (su[i] != 0 && su[i+1] != 0 && su[i+2] != 0 && su[i+3] != 0 && su[i+4] != 0)
+		if (rk[i] != 0 && rk[i+1] != 0 && rk[i+2] != 0 && rk[i+3] != 0 && rk[i+4] != 0)
 			return 1;
-	if (su[0] != 0 && su[1] != 0 && su[2] != 0 && su[3] != 0 && su[12] != 0)
+	if (rk[0] != 0 && rk[1] != 0 && rk[2] != 0 && rk[3] != 0 && rk[12] != 0)
 		return 1;
 	return 0;
 }
